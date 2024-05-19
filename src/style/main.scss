@@ -1,0 +1,260 @@
+$mincho: "Zen Old Mincho", serif;
+$gothic: "Noto Sans JP", sans-serif;
+$breakpointTablet: 768px;
+$breakpointSp: 480px;
+$maxContentWidth: 1440px;
+
+:root {
+  --main-color: 66,179,53;
+  --sub-color-lighter: 141,214,172;
+  --sub-color-darker: 1,92,84;
+}
+
+@mixin text-shadow($color) {
+  text-shadow:
+    $color 1px 1px 1px,
+    $color -1px 1px 1px,
+    $color 1px -1px 1px,
+    $color -1px -1px 1px;
+}
+
+.body_inner {
+  font-family: $mincho;
+  font-optical-sizing: auto;
+  overflow: hidden;
+
+  /* 共通パーツ:start */
+  .section {
+    &.green_back {
+      background-color: rgb(var(--sub-color-darker), 1);
+      color: white;
+    }
+
+    .section_inner {
+      padding: 64px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      @media (max-width: $breakpointTablet) {
+        padding: 32px 0;
+      }
+    }
+
+    .section_title {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 0;
+      border-bottom: 4px solid rgb(var(--main-color), 1);
+    }
+  }
+
+  .animation {
+     opacity: 0;
+     transform: translate3d(0, 100%, 0);
+     transition: all 2s ease;
+   &.left {
+    transform: translate3d(-100%, 0, 0);
+   }
+   &.right {
+    transform: translate3d(100%, 0, 0);
+   }
+   &.delay {
+    transition: all 3s ease;
+   }
+   &.fast {
+    transition: all 1 ease;
+   }
+
+   &.active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+   }
+  }
+  /* 共通パーツ:end */
+
+  .mainvisual_section {
+    background-image: url('../img/mainvisual_white.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    @media (max-width: $breakpointTablet) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .corp_name {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+      font-size: 24px;
+      padding: 16px;
+      letter-spacing: -1px;
+    }
+
+    .copy_box {
+      width: 600px;
+      margin: 0;
+      position: absolute;
+      top: calc(50% - 120px);
+      left: calc(50% - 600px);
+      background-color: rgb(white, 0.4);
+      padding: 32px;
+      border-radius: 8px;
+
+      @media (max-width: $breakpointTablet) {
+        margin: 0 auto;
+        width: 80%;
+        position: relative;
+        left: auto;
+        text-align: center;
+        padding: 16px;
+      }
+
+      .maincopy {
+        margin: 0;
+        font-size: 56px;
+        font-weight: bold;
+
+        strong {
+          color: rgb(var(--main-color));
+          font-size: 64px;
+          @include text-shadow(rgba(0,0,0,0.8));
+        }
+
+        @media (max-width: $breakpointTablet) {
+          font-size: 32px;
+
+          strong {
+            font-size: 40px;
+          }
+        }
+      }
+
+      .subcopy {
+        margin: 8px 0 0 0;
+        font-size: 26px;
+
+        strong {
+          color: rgb(var(--main-color));
+          font-size: 28px;
+          @include text-shadow(rgba(0,0,0,0.6));
+        }
+
+        @media (max-width: $breakpointTablet) {
+          font-size: 14px;
+
+          strong {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .ceo_voice_section {
+    .ceo_voice_section_inner {
+      .ceo_voice_box {
+        display: flex;
+        width: 80%;
+        gap: 64px;
+        margin-top: 64px;
+        align-items: flex-start;
+
+        @media (max-width: $breakpointTablet) {
+          flex-direction: column;
+          gap: 32px;
+          margin-top: 32px;
+          width: 100%;
+        }
+
+        .ceo_voice_text {
+          font-size: 18px;
+          width: 50%;
+          margin: 0;
+          line-height: 140%;
+          white-space: pre-wrap;
+
+          @media (max-width: $breakpointTablet) {
+            width: 100%;
+            padding: 0 24px;
+            font-size: 16px;
+          }
+
+          .ceo_sign {
+            display: block;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: right;
+
+            @media (max-width: $breakpointTablet) {
+              font-size: 28px;
+            }
+          }
+        }
+
+        .ceo_voice_img_wrapper {
+          width: 50%;
+          @media (max-width: $breakpointTablet) {
+            width: 100%;
+            padding: 0 24px;
+          }
+
+          .ceo_voice_img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .company_summary_section {
+    .company_summary_section_inner {
+      .company_summary_table {
+        margin-top: 64px;
+        width: 600px;
+
+        @media (max-width: $breakpointTablet) {
+          width: calc(100% - 48px);
+          margin: 32px auto;
+        }
+
+        tr {
+          border-bottom: 1px solid white;
+        }
+
+        th,td {
+          padding: 16px;
+        }
+      }
+    }
+  }
+
+  .footer_section {
+    .footer_section_inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      width: 100%;
+      
+      .footer_text {
+        font-size: 14px;
+        margin: 0;
+
+        @media (max-width: $breakpointTablet) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+
