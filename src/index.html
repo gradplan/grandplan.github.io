@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8"/>
     <title>株式会社グランドプラン</title>
+    <meta name="description" content="株式会社グランドプランのコーポレートサイトです。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="./js/main.js" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +18,14 @@
           <h1 class="corp_name">株式会社グランドプラン</h1>
 
           <div class="copy_box">
-            <p class="maincopy animation delay right">お客様の<strong>理想</strong>を現実に</h1>
-            <p class="subcopy animation left">私たちはお客様と<strong>共に</strong>、未来を設計します。</h1>
+            <p class="maincopy animation delay right">お客様の<br class="sp-only"/><strong>理想</strong>を現実に</h1>
+            <p class="subcopy animation left">私たちはお客様と共に、<br class="sp-only"/><strong>未来</strong>を設計します。</h1>
+          </div>
+
+          <div class="mainvisual_cta">
+            <div class="cta_button_wrapper">
+              <a href="#contact" class="cta_button animation delay">お問い合わせはこちら</a>
+            </div>
           </div>
         </div>
       </section>
@@ -26,7 +34,7 @@
           <h2 class="section_title animation">代表メッセージ</h2>
           <div class="ceo_voice_box">
             <div class="ceo_voice_img_wrapper">
-              <img src="./img/mainvisual_black.jpg" alt="代表取締役 衛藤 啓二" class="ceo_voice_img animation left">
+              <img src="./img/ceo.jpg" alt="代表取締役 衛藤 啓二" class="ceo_voice_img animation left">
             </div>
             <p class="ceo_voice_text animation right">私ども、株式会社グランドプランはお客様のお役に立てる売買に重点をおいて、お付き合いをさせていただいております。
 
@@ -46,7 +54,7 @@
       </section>
       <section class="section green_back company_summary_section">
         <div class="section_inner company_summary_section_inner">
-          <h2 class="section_title animation">会社概要</h2>
+          <h2 id="company_summary" class="section_title animation">会社概要</h2>
           <table class="company_summary_table animation">
             <tr>
               <th>社名</th>
@@ -81,7 +89,29 @@
       </section>
       <section class="section contact_section">
         <div class="section_inner contact_section_inner">
-          <h2 class="section_title">お問い合わせ</h2>
+          <h2 id="contact" class="section_title animation">お問い合わせ</h2>
+          <div class="contact_box_wrapper">
+            <div class="contact_box">
+              <div class="contact_information animation left">
+                <div class="contact_information_inner">
+                  <h3 class="contact_title">ウェブからのお問い合わせ</h3>
+                  <div class="contact_btn_wrapper">
+                    <a href="#" class="contact_btn" target="_blank">フォームを開く</a>
+                  </div>
+                  <h3 class="contact_title">お電話はこちら</h3>
+                  <div class="contact_tel_box">
+                    <div class="contact_btn_wrapper">
+                      <a class="contact_btn" href="#">000-0000-0000</a><br/>
+                    </div>
+                    <span class="contact_tel_subinfo">※受付時間: 9:00〜18:00（土日祝日を除く）</span>
+                  </div>
+                </div>
+              </div>
+              <div class="contact_img_wrapper animation right">
+                <img src="./img/contact.jpg" alt="お問い合わせ" class="contact_img">
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <footer class="section green_back footer_section">
