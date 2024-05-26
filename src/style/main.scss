@@ -360,6 +360,19 @@ $maxContentWidth: 1440px;
     }
   }
 
+  .map_section {
+    .map_section_inner {
+      padding: 0;
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
+
+      iframe {
+        height: 100%;
+      }
+    }
+  }
+
   .footer_section {
     .footer_section_inner {
       display: flex;
