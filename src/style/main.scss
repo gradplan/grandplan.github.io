@@ -1,5 +1,6 @@
 $mincho: "Zen Old Mincho", serif;
 $gothic: "Noto Sans JP", sans-serif;
+$breakpointSmallPc: 1000px;
 $breakpointTablet: 768px;
 $breakpointSp: 480px;
 $maxContentWidth: 1440px;
@@ -95,7 +96,7 @@ $maxContentWidth: 1440px;
     width: 100vw;
     position: relative;
 
-    @media (max-width: $breakpointTablet) {
+    @media (max-width: $breakpointSmallPc) {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -122,7 +123,7 @@ $maxContentWidth: 1440px;
       padding: 32px;
       border-radius: 8px;
 
-      @media (max-width: $breakpointTablet) {
+      @media (max-width: $breakpointSmallPc) {
         margin: 0 auto;
         width: 80%;
         position: relative;
@@ -186,6 +187,9 @@ $maxContentWidth: 1440px;
 
         .cta_button {
           @include buttonStyle;
+          padding: 24px 32px;
+          font-size: 18px;
+          font-weight: bold;
         }
       }
     }
