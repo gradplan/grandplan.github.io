@@ -110,6 +110,29 @@ $maxContentWidth: 1440px;
       font-size: 24px;
       padding: 16px;
       letter-spacing: -1px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      @media (max-width: $breakpointSmallPc) {
+        padding: 12px;
+      }
+
+      .logo_wrapper {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .logo {
+          width: 32px;
+          height: 32px;
+        }
+      }
+
+      .corp_name_text {
+        font-family: $mincho;
+        font-weight: bold;
+      }
     }
 
     .copy_box {
