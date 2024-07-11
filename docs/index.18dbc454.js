@@ -597,6 +597,6 @@ function activateTargets(items) {
     });
 }
 
-},{"../style/main.scss":"knddS","../style/normalize.scss":"jowj5"}],"knddS":[function() {},{}],"jowj5":[function() {},{}]},["j2YDk","1SICI"], "1SICI", "parcelRequire94c2")
+},{"../style/normalize.scss":"jowj5","../style/main.scss":"knddS"}],"jowj5":[function() {},{}],"knddS":[function() {},{}]},["j2YDk","1SICI"], "1SICI", "parcelRequire94c2")
 
 //# sourceMappingURL=index.18dbc454.js.map
