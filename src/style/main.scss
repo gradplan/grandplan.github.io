@@ -107,15 +107,17 @@ $maxContentWidth: 1440px;
       top: 0;
       left: 0;
       margin: 0;
-      font-size: 24px;
+      font-size: 28px;
       padding: 16px;
       letter-spacing: -1px;
       display: flex;
       gap: 8px;
       align-items: center;
+      flex-direction: row-reverse;
 
       @media (max-width: $breakpointSmallPc) {
         padding: 12px;
+        font-size: 18px;
       }
 
       .logo_wrapper {
@@ -124,8 +126,13 @@ $maxContentWidth: 1440px;
         gap: 8px;
 
         .logo {
-          width: 32px;
-          height: 32px;
+          width: 64px;
+          height: 64px;
+
+          @media (max-width: $breakpointSmallPc) {
+            width: 40px;
+            height: 40px;
+          }
         }
       }
 
@@ -174,6 +181,10 @@ $maxContentWidth: 1440px;
           strong {
             font-size: 32px;
           }
+        }
+
+        @media (max-width: 335px) {
+          font-size: 24px;
         }
       }
 
