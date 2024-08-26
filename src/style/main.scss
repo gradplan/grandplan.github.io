@@ -107,31 +107,57 @@ $maxContentWidth: 1440px;
       top: 0;
       left: 0;
       margin: 0;
-      font-size: 28px;
-      padding: 16px;
-      letter-spacing: -1px;
+      padding: 16px 24px;
       display: flex;
-      gap: 8px;
-      align-items: center;
-      flex-direction: row-reverse;
+      gap: 16px;
+      flex-direction: column;
 
       @media (max-width: $breakpointSmallPc) {
         padding: 12px;
-        font-size: 18px;
+        gap: 8px;
       }
+
+      .corp_name_text {
+        display: inline-flex;
+        flex-direction: column;
+
+        .corp_type_text {
+          font-size: 12px;
+
+          @media (max-width: $breakpointSmallPc) {
+            font-size: 10px;
+          }
+        }
+
+        .corp {
+          position: relative;
+          left: -6px; // font-sizeの差により若干社名が右にずれるので調整
+          letter-spacing: -6px;
+          font-size: 40px;
+          line-height: .8;
+
+          @media (max-width: $breakpointSmallPc) {
+            font-size: 28px;
+            left: -4px;
+            line-height: .9;
+          }
+        }
+      }
+
+
 
       .logo_wrapper {
         display: flex;
-        align-items: center;
+        align-items: top;
         gap: 8px;
 
         .logo {
-          width: 64px;
-          height: 64px;
+          width: 72px;
+          height: 72px;
 
           @media (max-width: $breakpointSmallPc) {
-            width: 40px;
-            height: 40px;
+            width: 52px;
+            height: 52px;
           }
         }
       }
