@@ -109,7 +109,7 @@ $maxContentWidth: 1440px;
       margin: 0;
       padding: 16px 24px;
       display: flex;
-      gap: 16px;
+      gap: 12px;
       flex-direction: column;
 
       @media (max-width: $breakpointSmallPc) {
@@ -117,7 +117,7 @@ $maxContentWidth: 1440px;
         gap: 8px;
       }
 
-      .corp_name_text {
+      .corp_full_name {
         display: inline-flex;
         flex-direction: column;
 
@@ -129,21 +129,19 @@ $maxContentWidth: 1440px;
           }
         }
 
-        .corp {
+        .corp_name_text {
           position: relative;
           left: -6px; // font-sizeの差により若干社名が右にずれるので調整
           letter-spacing: -6px;
-          font-size: 40px;
-          line-height: .8;
+          font-size: 48px;
+          line-height: .9;
 
           @media (max-width: $breakpointSmallPc) {
-            font-size: 28px;
+            font-size: 36px;
             left: -4px;
-            line-height: .9;
           }
         }
       }
-
 
 
       .logo_wrapper {
@@ -152,12 +150,12 @@ $maxContentWidth: 1440px;
         gap: 8px;
 
         .logo {
-          width: 72px;
-          height: 72px;
+          width: 80px;
+          height: 80px;
 
           @media (max-width: $breakpointSmallPc) {
-            width: 52px;
-            height: 52px;
+            width: 56px;
+            height: 56px;
           }
         }
       }
@@ -308,6 +306,7 @@ $maxContentWidth: 1440px;
 
             @media (max-width: $breakpointTablet) {
               font-size: 28px;
+              line-height: 1.2;
             }
           }
         }
